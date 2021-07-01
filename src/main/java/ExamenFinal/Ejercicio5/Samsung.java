@@ -20,6 +20,8 @@ public class Samsung implements IMarca {
 		System.out.println("Ram: " + ram + " GB");
 		System.out.println("CPU: " + cpu + " de potencia");
 		System.out.println("Almacenamiento: " + almacenamiento + " GB");
+		System.out.println("Precio: "+precio);
+
 	}
 
 	@Override

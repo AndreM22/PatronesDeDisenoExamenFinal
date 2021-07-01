@@ -1,14 +1,18 @@
 package ExamenFinal.Ejercicio5;
 
-public class Carcasa implements IMarca {
+public class MemoriaExterna implements IMarca {
 	IMarca marca;
-	int aumento;
+	int memoriaE;
+	int costo;
 
-	public Carcasa(IMarca base, int aumento) {
-		System.out.println("Se incorporó una carcasa");
+	public MemoriaExterna(IMarca base, int memoriaE,int costo) {
+		System.out.println("Se incorporó una memoria Externa");
 		this.marca = base;
-		this.aumento = aumento;
-		this.setPrecio(marca.precio() + aumento);
+		this.memoriaE = memoriaE;
+		this.costo=costo;
+		this.setPrecio(marca.precio() + costo);
+		this.setAlmacenamiento(marca.getAlmacenamiento() + memoriaE);
+
 	}
 
 	@Override

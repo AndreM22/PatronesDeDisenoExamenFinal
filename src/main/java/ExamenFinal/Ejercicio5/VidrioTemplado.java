@@ -1,11 +1,11 @@
 package ExamenFinal.Ejercicio5;
 
-public class Carcasa implements IMarca {
+public class VidrioTemplado implements IMarca {
 	IMarca marca;
 	int aumento;
 
-	public Carcasa(IMarca base, int aumento) {
-		System.out.println("Se incorporó una carcasa");
+	public VidrioTemplado(IMarca base, int aumento) {
+		System.out.println("Se incorporó un vidrio templado");
 		this.marca = base;
 		this.aumento = aumento;
 		this.setPrecio(marca.precio() + aumento);
