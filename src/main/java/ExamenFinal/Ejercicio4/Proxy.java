@@ -26,12 +26,12 @@ public class Proxy implements IServidor {
 		for (Usuario u : usuarios) {
 			if (u.getUsuario().equals(usuario)) {
 				if (u.getContrasena().equals(password)) {
-					if (u.id % 2 == 0) {
-						System.out.println("El servidor 2 esta realizando una acción");
-						servidor2.ingresar(usuario, password);
-					} else {
-						System.out.println("El servidor 1 está realizando una acción");
+					if (esPrimo(u.id)) {
+						System.out.println("El servidor 1 esta realizando una acción");
 						servidor1.ingresar(usuario, password);
+					} else {
+						System.out.println("El servidor 2 está realizando una acción");
+						servidor2.ingresar(usuario, password);
 					}
 				} else {
 					System.out.println("Contraseña incorrecta");
@@ -42,6 +42,9 @@ public class Proxy implements IServidor {
 	}
 	
 	public boolean esPrimo(int n) {
+		if(n==1) {
+			return false;
+		}
 		if(n==2) {
 			return true;
 		}
