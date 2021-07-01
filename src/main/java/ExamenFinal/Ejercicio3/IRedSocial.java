@@ -1,5 +1,5 @@
 package ExamenFinal.Ejercicio3;
 
 public interface IRedSocial {
-	void mostrarIntegracion();
+	void mostrarIntegracion(Control c);
 }

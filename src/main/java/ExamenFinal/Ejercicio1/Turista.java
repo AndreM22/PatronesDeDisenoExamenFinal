@@ -45,7 +45,8 @@ public class Turista implements ITurista {
 		double dineroGastado=montoDinero*rd.nextDouble();
 		System.out.println("Dinero Gastado "+dineroGastado);
 		montoDinero-=dineroGastado;
-		laPaz.setDineroTurismo(laPaz.getDineroTurismo()+montoDinero);
+		laPaz.setDineroTurismo(laPaz.getDineroTurismo()+dineroGastado);
+		System.out.println("Nuevo dinero de turismo en La Paz: "+laPaz.getDineroTurismo());
 		this.mostrarInfo();
 	}
 
@@ -55,7 +56,8 @@ public class Turista implements ITurista {
 		double dineroGastado=(santaCruz.getNumeroProvincias()*0.5);
 		System.out.println("Dinero Gastaado "+dineroGastado);
 		montoDinero-=dineroGastado;
-		santaCruz.setDineroTurismo(santaCruz.getDineroTurismo()+montoDinero);
+		santaCruz.setDineroTurismo(santaCruz.getDineroTurismo()+dineroGastado);
+		System.out.println("Nuevo dinero de turismo en Santa Cruz: "+santaCruz.getDineroTurismo());
 
 		this.mostrarInfo();
 	}
@@ -65,9 +67,10 @@ public class Turista implements ITurista {
 	public void visitar(Cochabamba cochabamba) {
 		System.out.println("Visitando Cochabamba");
 		double dineroGastado=(cochabamba.getNumeroHabitantes()*0.1);
-		System.out.println("Dinero gastado"+dineroGastado);
+		System.out.println("Dinero gastado "+dineroGastado);
 		montoDinero-=dineroGastado;
-		cochabamba.setDineroTurismo(cochabamba.getDineroTurismo()+montoDinero);
+		cochabamba.setDineroTurismo(cochabamba.getDineroTurismo()+dineroGastado);
+		System.out.println("Nuevo dinero de turismo en Cochabamba: "+cochabamba.getDineroTurismo());
 
 		this.mostrarInfo();
 		
