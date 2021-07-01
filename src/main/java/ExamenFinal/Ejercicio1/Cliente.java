@@ -7,7 +7,7 @@ public class Cliente {
 		SantaCruz sc = new SantaCruz(20, 2000, "Calido", 15000);
 		Cochabamba cb = new Cochabamba(15, 2000, "Templado", 10000);
 		
-		Turista t = new Turista("Andre",10000,1235639);
+		ITurista t = new Turista("Andre",10000,1235639);
 
 		sc.serVisitado(t);
 		lp.serVisitado(t);
